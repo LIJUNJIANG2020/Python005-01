@@ -52,35 +52,36 @@
 
 ## 通用方法
 
+- is
 
+- ==
+
+- count
+
+- in
+
+    
 
 
 
 # 控制流
 
-
-
-
-
-
-
-
+- if 
+- if / else   |  if /elif / else
+- for / in
+- while
 
 # 函数
 
+def functionName():
 
-
-
-
-
-
-
+​	pass
 
 
 
 # 模块
 
-
+def \_\_name\_\_ == "\_\_main\_\_:
 
 
 
