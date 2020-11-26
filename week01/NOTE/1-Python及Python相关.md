@@ -1,4 +1,4 @@
-
+ 
 
 学习笔记
 
@@ -186,4 +186,74 @@
 
 - 常用命令
 
+    安装:	pip install NAME      
+
+    安装指定版本:	pip install NAME==VERSION
+
+    升级pip: 	pip install pip -U
+
+    查看已安装： pip list
+
+# Python IDE
+
+- [VSCode](https://code.visualstudio.com/)
+
+    - 插件
+
+    - 功能
+
+    - 快捷键
+
+        > option + shift + f ： 格式化代码
+
+        > option + 左/右： 光标移动一个单词
+        >
+        > option + 上/下： 对光标所在行进行上下位置调换
+
+        > command + 上/下： 光标快速移动到代码块开头/结尾
+        >
+        > command + 左/右： 光标快速移动到当前行的开头/结尾
+
+        
+
+- [Pycharm](https://www.jetbrains.com/pycharm/download/#section=mac)
+
+- [Jupyter Notebook](https://jupyter.org/)
+
+# Python开发流程
+
+1. 搞清需求 (明白需求十分重要，是后续步骤开展的必要条件)
+2. 编写源代码 (.py)
+3. 使用Python解释器转换为目标代码（.pyc  一般情况下与步骤4同步完成）
+4. 运行程序
+5. 测试
+6. 修复错误
+7. 再运行、测试
+8. 测试完成迁移部署
+
+# Python [虚拟环境](https://docs.python.org/zh-cn/3.7/tutorial/venv.html)
+
+-  [virtual environment](https://docs.python.org/zh-cn/3/glossary.html#term-virtual-environment)，
+
+    一个目录树，其中安装有特定Python版本，以及许多其他包。
+
+- 作用
+
+    为每个项目或每个应用各自建立一套“独立、隔离”的Python运行环境，包括Python版本、第三方库版本，
+
+    避免在同一个系统中多个Python版本及各Python版本对应第三方库版本管理混乱
+
+    同时也方便项目的迁移、部署，保持生产环境和测试环境一致
+
+- python 3.* 版本 默认自带 venv 模块
+
+- venv （**使用对应版本的python命令创建对应的该版本的虚拟环境**）
+
     
+
+    > 创建虚拟环境 myvenv1：	python3.7 -m venv myvenv1
+    >
+    > 激活 myvenv1虚拟环境:   	sourct myvenv1/bin/activat
+    >
+    > 退出当前虚拟环境：			deactivate
+
