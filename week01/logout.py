@@ -7,7 +7,7 @@ import logging
 
 now_date = datetime.strftime(datetime.now(), "%Y-%m-%d")   
 dirpath = os.getcwd() + "/var/log/python-" + now_date
-logfile = "logout.log"
+logfile = "logout.log" 
 
 def logToFile(logfilename):
     logfile = os.path.join(dirpath, logfilename)
