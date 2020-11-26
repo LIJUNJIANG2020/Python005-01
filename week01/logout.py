@@ -3,7 +3,7 @@
 import os
 from datetime import datetime
 import logging
-                   )
+
 
 now_date = datetime.strftime(datetime.now(), "%Y-%m-%d")   
 dirpath = os.getcwd() + "/var/log/python-" + now_date
@@ -11,7 +11,7 @@ logfile = "logout.log"
 
 def logToFile(logfilename):
     logfile = os.path.join(dirpath, logfilename)
-    
+
     if not os.path.exists(dirpath):
         os.makedirs(dirpath)
 
