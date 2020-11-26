@@ -143,16 +143,46 @@
 
 - pthon
 
-    该程序可以交互执行也可采用文件形式加载执行
+    > 该程序可以交互执行也可采用文件形式加载执行
 
 - ipthon
 
-    可以扩展有python的交互功能
+    > 可以扩展python的交互功能
 
 - bpython
 
 
 # pip命令
+
+- 配置加速
+
+    国内常用镜像源
+
+    ​	[阿里云]( http://mirrors.aliyun.com/pypi/simple/)、[中国科技大学]( https://pypi.mirrors.ustc.edu.cn/simple/)、[豆瓣(douban)]( http://pypi.douban.com/simple/)、[清华大学]( https://pypi.tuna.tsinghua.edu.cn/simple/)、[中国科学技术大学]( http://pypi.mirrors.ustc.edu.cn/simple/)
+
+    更换pip源方法
+
+     - 临时方法：
+
+        可以在使用pip的时候在后面加上-i参数，指定pip源 
+
+        >pip install  -i pip源地址 [包名]
+        >
+        >或
+        >
+        >pip config set global.index-url pip源地址 [包名]
+
+    -	永久方法：
+
+        修改 pip.conf 文件 (没有就创建一个)
+
+        >vim $HOME/.pip/pip.conf
+        >
+        >​	[global]
+        >
+        >​	index-url = pip源地址-url pip源地址
+
+        
 
 - 常用命令
 
