@@ -9,7 +9,7 @@ now_date = datetime.strftime(datetime.now(), "%Y-%m-%d")
 dirpath = os.getcwd() + "/var/log/python-" + now_date
 logfile = "logout.log" 
 
-def logToFile(logfilename):
+def logToFile(logfilename=logfile):
     logfile = os.path.join(dirpath, logfilename)
 
     if not os.path.exists(dirpath):
@@ -25,4 +25,4 @@ def logToFile(logfilename):
 
     
 if __name__ == "__main__":
-    logToFile(logfile)
+    logToFile()
