@@ -9,17 +9,17 @@ now_date = datetime.strftime(datetime.now(), "%Y-%m-%d")
 dirpath = os.getcwd() + "/var/log/python-" + now_date
 logfile = "logout.log" 
 
+logging.basicConfig(filename=logfile, 
+                    level="DEBUG",
+                    format="%(asctime)s %(name)s %(levelname)s [line: %(lineno)d] %(message)s"
+                        )
+
 def logToFile(logfilename=logfile):
     logfile = os.path.join(dirpath, logfilename)
 
     if not os.path.exists(dirpath):
         os.makedirs(dirpath)
 
-    logging.basicConfig(filename=logfile, 
-                    level="DEBUG",
-                    format="%(asctime)s %(name)s %(levelname)s [line: %(lineno)d] %(message)s"
-                        )
-    
     logging.info("The function logToFile is called")
 
 
