@@ -92,7 +92,7 @@ form_data = {
 # with requests.Session() as s:
 session = requests.Session()
 session.headers = headers
-requests.utils.add_dict_to_cookiejar(session.cookies, cookies)
+requests.utils.add_dict_to_cookiejar(se.cookies, cookies)
 
 res = session.get("https://movie.douban.com/top250")
 # print(r.text)

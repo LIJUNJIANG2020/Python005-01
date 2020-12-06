@@ -1,5 +1,6 @@
 import socket
 from logout import logToFile
+from pathlib import Path
 
 
 def echoServer(host, port, listens=1):
@@ -23,6 +24,7 @@ def echoServer(host, port, listens=1):
 
         logToFile('传输完成')
         with open('tra_file.txt', 'w') as f:
+            # print(Path(__file__))
             for line in buffer:
                 f.write(line.decode())
 

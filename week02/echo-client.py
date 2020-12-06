@@ -17,6 +17,7 @@ def echoClient(host, port):
 				# print('send')
 	else:
 		print('input error')
+	c.close()
 
 					
 
