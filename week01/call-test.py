@@ -1,3 +1,4 @@
 from logout import logToFile
 
-logToFile()
+info = "callbask"
+logToFile(info=info)
