@@ -1,3 +1,6 @@
 settings.json
 *.log
 *.pyc
+comment
+*.txt
+var/*

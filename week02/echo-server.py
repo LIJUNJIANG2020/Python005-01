@@ -2,6 +2,12 @@ import socket
 from logout import logToFile
 from pathlib import Path
 
+upload = Path(__file__).parent.parent.joinpath('var', 'upload')
+up_file = 'tar_file.txt'
+
+if not upload.is_dir():
+    Path.mkdir(upload)
+
 
 def echoServer(host, port, listens=1):
     BIND = (host, port)
@@ -23,7 +29,7 @@ def echoServer(host, port, listens=1):
             buffer.append(c_data)
 
         logToFile('传输完成')
-        with open('tra_file.txt', 'w') as f:
+        with open(upload.joinpath(up_file), 'w') as f:
             # print(Path(__file__))
             for line in buffer:
                 f.write(line.decode())
