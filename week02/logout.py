@@ -15,24 +15,22 @@ dirpath = Path(__file__).parent.parent.joinpath('var', 'log', "python-"+now_date
 logfile = "logout.log" 
 
 
-def logFomat(logfile):
-    logging.basicConfig(filename=dirpath.joinpath(logfile), 
+def logFomat(logfile=logfile):
+    logfile = os.path.join(dirpath, logfile)
+    if not os.path.exists(dirpath):
+        os.makedirs(dirpath)
+
+    logging.basicConfig(filename=logfile, 
                         level="DEBUG",
                         format="%(asctime)s %(name)s %(levelname)s [line: %(lineno)d] %(message)s"
                         )
 
 
 def logToFile(info, logfilename=logfile):
-    logfile = os.path.join(dirpath, logfilename)
-    print(dirpath)
-    if not os.path.exists(dirpath):
-        os.makedirs(dirpath)
-
-    # logout()
-    logFomat(logfile)
+    logFomat(logfilename)
     logging.info(info)
 
 
-    
 if __name__ == "__main__":
+    # logFomat(logfile)
     logToFile('text')

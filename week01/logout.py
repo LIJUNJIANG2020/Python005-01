@@ -28,4 +28,4 @@ def logToFile(info, logfilename=logfile):
 
     
 if __name__ == "__main__":
-    logToFile()
+    logToFile('text')
