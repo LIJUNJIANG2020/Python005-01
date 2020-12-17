@@ -18,7 +18,7 @@ class Book_table(Base):
     __tablename__ = 'bookorm'
     book_id = Column(Integer(), primary_key=True)
     book_name = Column(String(50), index=True)
-
+    
 
 class Auther_talbe(Base):
     __tablename__ = 'autherorm'
