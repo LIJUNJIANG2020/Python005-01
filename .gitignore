@@ -4,3 +4,4 @@ settings.json
 comment
 *.txt
 var/*
+.DS_Store
