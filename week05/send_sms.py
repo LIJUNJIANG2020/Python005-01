@@ -1,10 +1,11 @@
 import redis
-import time
+# import time
 
 
 client = redis.Redis(host='10.0.0.128', password='qwe123')
 
-def sendsms(telephone_number: int, content: str, key=None):
+
+def send_ms(telephone_number: int, content: str):
     count = client.get(telephone_number)
     
     if count is None:
@@ -20,14 +21,11 @@ def sendsms(telephone_number: int, content: str, key=None):
 
 
 if __name__ == '__main__':
-    sendsms(12345654321, content="hello") 
-    sendsms(12345654321, content="hello") 
-    sendsms(88887777666, content="hello") 
-    sendsms(12345654321, content="hello") 
-    sendsms(12345654321, content="hello") 
-    sendsms(88887777666, content="hello")
-    sendsms(12345654321, content="hello") 
-    sendsms(12345654321, content="hello") 
-
-
-        
+    send_ms(12345654321, content="hello")
+    send_ms(12345654321, content="hello")
+    send_ms(88887777666, content="hello")
+    send_ms(12345654321, content="hello")
+    send_ms(12345654321, content="hello")
+    send_ms(88887777666, content="hello")
+    send_ms(12345654321, content="hello")
+    send_ms(12345654321, content="hello")
